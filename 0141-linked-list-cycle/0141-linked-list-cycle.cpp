@@ -123,6 +123,60 @@
 // //
 
 
+// /**
+//  * Definition for singly-linked list.
+//  * struct ListNode {
+//  *     int val;
+//  *     ListNode *next;
+//  *     ListNode(int x) : val(x), next(NULL) {}
+//  * };
+//  */
+// class Solution {
+// public:
+//     bool hasCycle(ListNode *head) 
+//     {
+//         ListNode *temp = head ;
+//         int ct = 0 ;
+//         while(temp ) 
+//         {
+//             temp = temp->next ;
+//             ct++ ;
+//             if(ct==100000) break ;// // although total node not more than 10000 but we take 100000
+//         }
+//         if(ct<100000) return false ;
+//         return true ;
+//     }
+// };
+
+
+
+
+
+
+
+
+
+
+
+// //
+// // // //    3rd Method    ======>  Slow and fast pointer     
+// // // //    3rd Method    ======>  Slow and fast pointer     
+// // // //    3rd Method    ======>  Slow and fast pointer     
+// // // //    3rd Method    ======>  Slow and fast pointer     
+// //
+// //     // //  Floyd's Tortoise and Hare 
+// //     // //  Floyd's Tortoise and Hare 
+// //     // //  Floyd's Tortoise and Hare 
+// // 
+// //
+// // //   Time Complexity   = o(n)
+// //
+// //
+// // //   Space Complexity  = O(1) constant 
+// //
+
+
+
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -135,19 +189,16 @@ class Solution {
 public:
     bool hasCycle(ListNode *head) 
     {
-        ListNode *temp = head ;
-        int ct = 0 ;
-        while(temp ) 
+        ListNode *slow = head , *fast = head ;
+        while(fast && fast->next ) 
         {
-            temp = temp->next ;
-            ct++ ;
-            if(ct==100000) break ;// // although total node not more than 10000 but we take 100000
-        }
-        if(ct<100000) return false ;
-        return true ;
+            slow = slow->next ;
+            fast = fast->next->next ;
+            if(slow == fast) return true ;
+        } 
+        return false ;
     }
 };
-
 
 
 
