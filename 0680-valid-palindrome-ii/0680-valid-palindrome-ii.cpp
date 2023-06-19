@@ -4,8 +4,8 @@
 
 
 // //
-// // // // // // //  Solve Using  Three   Method  ===>     
-// // // // // // //  Solve Using  Three   Method  ===>                        
+// // // // // // //  Solve Using  One Method  ===>     
+// // // // // // //  Solve Using  One Method  ===>                        
 // //                     
 // //                     
 // // //  1st Method  ====>  Two Pointer and function    TC = O(n) , SC = O(1) constant
