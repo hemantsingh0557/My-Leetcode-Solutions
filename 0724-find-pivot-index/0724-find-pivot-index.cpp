@@ -59,28 +59,28 @@
 
 
 
-class Solution {
-public:
-    int pivotIndex(vector<int>& nums) 
-    {
-        int n = nums.size() ;
-        if(n==1 ) return 0 ;
-        int left = 0 , right = 0  ; 
-        int middleIndex = 0 ; 
-        for(int i=0; i<n; i++)
-        {
-            middleIndex = i ; 
-            if(i!=0) left += nums[i-1] ;
-            right = 0 ; 
-            for(int j=i+1; j<n; j++)
-            {
-                right += nums[j] ;
-            }
-            if(left==right) return middleIndex ;
-        }
-        return -1 ;
-    }
-};
+// class Solution {
+// public:
+//     int pivotIndex(vector<int>& nums) 
+//     {
+//         int n = nums.size() ;
+//         if(n==1 ) return 0 ;
+//         int left = 0 , right = 0  ; 
+//         int middleIndex = 0 ; 
+//         for(int i=0; i<n; i++)
+//         {
+//             middleIndex = i ; 
+//             if(i!=0) left += nums[i-1] ;
+//             right = 0 ; 
+//             for(int j=i+1; j<n; j++)
+//             {
+//                 right += nums[j] ;
+//             }
+//             if(left==right) return middleIndex ;
+//         }
+//         return -1 ;
+//     }
+// };
 
 
 
@@ -100,26 +100,26 @@ public:
 // //                               
 
 
-// class Solution {
-// public:
-//     int pivotIndex(vector<int>& nums)  
-//     {
-//         int n = nums.size() ;
-//         if(n==1 ) return 0 ;
-//         vector<int> pre(n+1 , 0 ) ;   
-//         for(int i=0; i<n; i++) pre[i+1] = pre[i] + nums[i] ;
-//         int left = 0 , right = 0  ; 
-//         int middleIndex = 0 ; 
-//         for(int i=0; i<n; i++)
-//         {
-//             middleIndex = i ; 
-//             if(i!=0) left += nums[i-1] ;
-//             right = pre[n] - left - nums[middleIndex] ;
-//             if(left==right) return middleIndex ;
-//         }
-//         return -1 ;
-//     }
-// };
+class Solution {
+public:
+    int pivotIndex(vector<int>& nums)  
+    {
+        int n = nums.size() ;
+        if(n==1 ) return 0 ;
+        vector<int> pre(n+1 , 0 ) ;   
+        for(int i=0; i<n; i++) pre[i+1] = pre[i] + nums[i] ;
+        int left = 0 , right = 0  ; 
+        int middleIndex = 0 ; 
+        for(int i=0; i<n; i++)
+        {
+            middleIndex = i ; 
+            if(i!=0) left += nums[i-1] ;
+            right = pre[n] - left - nums[middleIndex] ;
+            if(left==right) return middleIndex ;
+        }
+        return -1 ;
+    }
+};
 
 
 
