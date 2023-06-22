@@ -1,9 +1,5 @@
 
 
-
-
-
-
 // //
 // // // // // // //  Solve Using  Four  Method  ===>     
 // // // // // // //  Solve Using  Four  Method  ===>                        
