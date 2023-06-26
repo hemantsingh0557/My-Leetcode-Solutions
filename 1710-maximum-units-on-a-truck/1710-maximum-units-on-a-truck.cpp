@@ -9,7 +9,7 @@
 // // // // // // //  Solve Using  One  Method  ===>                        
 // //                     
 // //                     
-// // //  1st Method  ====>     TC = O(nlog(n)) , SC = O(1) constant
+// // //  1st Method  ====> Fractional Knapsack    TC = O(nlog(n)) , SC = O(1) constant
 // //                      
 // //                     
 /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -38,11 +38,11 @@
 
 // //                           
 // //                           
-// // //  1st Method    ======> 
-// // //  1st Method    ======> 
-// // //  1st Method    ======> 
+// // //  1st Method    ======>   Fractional Knapsack
+// // //  1st Method    ======>   Fractional Knapsack
+// // //  1st Method    ======>   Fractional Knapsack
 // //                             
-// // //   Time Complexity   = O(n)   
+// // //   Time Complexity   = O(n log(n))   
 // //                              
 // // //   Space Complexity  = O(1) constant  
 // //                               
