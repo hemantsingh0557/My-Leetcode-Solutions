@@ -7,10 +7,10 @@
 // // // // // // //  Solve Using  Three   Method  ===>                        
 // //                     
 // //                     
-// // //  1st Method  ====> Only Recursion(not good)   TC = O(n) , SC = O(1) constant
+// // //  1st Method  ====> Only Recursion(not good)   TC = O(2^n) , SC = O(2^n * n) 
 // //                      
 // //                      
-// // //  2nd Method  ====>  Recursion Backtracking    TC = O(n) , SC = O(1) constant
+// // //  2nd Method  ====>  Recursion Backtracking    TC = O(2^n) , SC = O(2^n * n) 
 // //                     
 // //                     
 // // //  3rd Method  ====>  Bit masking    TC = O(2^n) , SC = O(1) constant 
@@ -48,9 +48,9 @@
 // // //  1st Method    ======>   Only Recursion(not good) 
 // // //  1st Method    ======>   Only Recursion(not good) 
 // //                             
-// // //   Time Complexity   = O(n)   
+// // //   Time Complexity   = O(2^n)   
 // //                              
-// // //   Space Complexity  = O(1) constant  
+// // //   Space Complexity  = O(2^n * n) 
 // //                               
 
 // //  but it is not efficient because  here we do not pass subset  by reference  so on each call
@@ -102,9 +102,9 @@
 // // //  2nd Method    ======>   Recursion Backtracking 
 // // //  2nd Method    ======>   Recursion Backtracking 
 // //                             
-// // //   Time Complexity   = O(n)   
+// // //   Time Complexity   = O(2^n)    
 // //                              
-// // //   Space Complexity  = O(1) constant  
+// // //   Space Complexity  = O(2^n * n)  
 // //                               
 
 
