@@ -17,7 +17,7 @@ public:
         subset(i+1 , sum , arr , N) ;
         subset(i+1 , sum +arr[i] , arr , N) ;
     }
-
+    
     vector<int> subsetSums(vector<int> arr, int N)
     {
         // Write Your Code here
