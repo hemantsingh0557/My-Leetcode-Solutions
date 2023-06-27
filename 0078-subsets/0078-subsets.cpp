@@ -13,7 +13,7 @@
 // // //  2nd Method  ====>  Recursion Backtracking    TC = O(2^n) , SC = O(2^n * n) 
 // //                     
 // //                     
-// // //  3rd Method  ====>  Bit masking    TC = O(2^n) , SC = O(1) constant 
+// // //  3rd Method  ====>  Bit masking    TC = O(2^n) , SC = O(2^n * n)
 // //                     
 // //                     
 /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -160,7 +160,7 @@
 // //                             
 // // //   Time Complexity   = O(2^n)   
 // //                              
-// // //   Space Complexity  = O(1) constant  
+// // //   Space Complexity  = O(2^n * n)   
 // //                               
 
 
