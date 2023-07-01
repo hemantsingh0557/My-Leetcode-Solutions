@@ -4,6 +4,16 @@
 
 
 
+// // //  can't optimized till now 
+// // //  can't optimized till now 
+// // //  can't optimized till now 
+// // //  can't optimized till now 
+
+
+
+
+
+
 
 // //
 // // // // // // //  Solve Using  Only One Method  ===>     
@@ -13,6 +23,9 @@
 // // //  1st Method  ====>  Simple Recursion and Backtracking    TC = O(k^n) , SC = O(k) 
 // //                      
 // //                      
+// // //  2nd Method  ====>     TC = O() , SC = O() 
+// //
+// //
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -20,9 +33,7 @@
 
 // class Solution {
 // public:
-//     int distributeCookies(vector<int>& cookies, int k) 
-//     {
-        
+//     int distributeCookies(vector<int>& cookies, int k) {
 //     }
 // };
 
@@ -82,6 +93,54 @@ public:
         return ans ;
     }
 };
+
+
+
+
+
+
+
+// //                           
+// //                           
+// // //  2nd  Method    ======>                 
+// // //  2nd  Method    ======>                 
+// // //  2nd  Method    ======>                 
+// //                             
+// // //   Time Complexity   = O()   
+// //                              
+// // //   Space Complexity  = O()   
+// //                              
+
+
+
+
+
+// class Solution {
+// public:
+//     int distributeCookies(vector<int>& cookies, int k) 
+//     {
+
+
+
+//     }
+// };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
