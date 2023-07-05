@@ -18,7 +18,7 @@
 // // //  2nd Method  ====>  Using only two loops    TC = O(n^2) , SC = O(1) constant
 // //                     
 // //                     
-// // //  3rd Method  ====>  Using stack(store value)   TC = O(n1 + n2) , SC = O(2n)  
+// // //  3rd Method  ====>  Using stack(store value)   TC = O(n1 + n2) , SC = O(10^4)  
 // //                     
 // //                     
 /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -142,7 +142,7 @@
 //                     break;
 //                 }
 //             }
-//             if(ind ==n2 || ind != -1) ans.push_back(-1) ; 
+//             if(ind != -1) ans.push_back(-1) ; 
 //         }
 //         return ans ;
 //     }
@@ -167,7 +167,7 @@
 // //                             
 // // //   Time Complexity   = O(n1 + n2)   
 // //                              
-// // //   Space Complexity  = O(2n)   
+// // //   Space Complexity  = O(10^4)   
 // //                               
 
 
