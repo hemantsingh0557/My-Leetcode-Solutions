@@ -75,10 +75,22 @@
 //         }
 //         if(temp.size()>0)st.push(temp) ;
 //         string ans ;
+//         // while(st.size())
+//         // {
+//         //     int sz = st.top().size() ;
+//         //     for(int i=0; i<sz; i++) ans.push_back(st.top()[i]) ;
+//         //     ans.push_back(' ') ;
+//         //     st.pop() ;
+//         // }
+//         //
+//         //
+//         // // // //     for more optimization do this 
+//         // // // //     for more optimization do this 
+//         // // // //     for more optimization do this 
+//         //
 //         while(st.size())
 //         {
-//             int sz = st.top().size() ;
-//             for(int i=0; i<sz; i++) ans.push_back(st.top()[i]) ;
+//             ans += st.top() ;
 //             ans.push_back(' ') ;
 //             st.pop() ;
 //         }
@@ -105,7 +117,7 @@
 // //                             
 // // //   Time Complexity   = O(2*n) = O(n)     it is total 
 // //                              
-// // //   Space Complexity  = O(2*n) - O(n)  
+// // //   Space Complexity  = O(2*n) = O(n)  
 // //                               
 
 
