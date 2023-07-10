@@ -10,7 +10,7 @@
 // // // // // // //  Solve Using  Two  Method  ===>                        
 // //                     
 // //                     
-// // //  1st Method  ====>  Using DFS    TC = O(n) , SC = O(1) constant
+// // //  1st Method  ====>  Using DFS    TC = O(n) , SC = O(n) 
 // //                      
 // //                      
 // // //  2nd Method  ====>  Using BFS    TC = O(n) , SC = O(n) 
@@ -63,7 +63,7 @@
 // //                             
 // // //   Time Complexity   = O(n)   
 // //                              
-// // //   Space Complexity  = O(1) constant  
+// // //   Space Complexity  = O(n)   
 // //                               
 
 
@@ -154,7 +154,6 @@ public:
         return ans ;
     }
 };
-
 
 
 
