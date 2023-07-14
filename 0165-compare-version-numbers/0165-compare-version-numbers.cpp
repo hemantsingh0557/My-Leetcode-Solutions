@@ -223,7 +223,7 @@ public:
     int compareVersion(string version1, string version2) 
     {
         int n = version1.size() , m = version2.size() ; 
-        int i=0, j=0 , k ;
+        int i=0, j=0  ;
         while(i<n || j<m)
         {
             int num1 = 0 , num2 = 0 ;
