@@ -4,21 +4,36 @@
 
 
 
+// // //  try to solve this by binary search or using upper_bound()     ====>
+// // //  try to solve this by binary search or using upper_bound()     ====>
+// // //  try to solve this by binary search or using upper_bound()     ====>
+// // //  try to solve this by binary search or using upper_bound()     ====>
+// // //  try to solve this by binary search or using upper_bound()     ====>
+
+
+
+
+
 // //
 // // // // // // //  Solve Using  Three   Method  ===>     
 // // // // // // //  Solve Using  Three   Method  ===>                        
 // //                     
 // //      // //   n is size of events , t is no of prev states or prev index , k is no of max events
 // //
-// // //  1st Method  ====>  Simple Recursion(T:E TLE TLE)   TC = O() , SC = O() 
+// // //  1st Method (Two Ways)  ====>  Simple Recursion(TLE TLE TLE)   TC = O() , SC = O()  see below 
 // //                      
 // //                      
-// // //  2nd Method  ====> 3- DP Memoization (map)   TC = O(n*(k+log(n))) (not confirmed) , SC = O(n*t*k)
+// // //  2nd Method (Two Ways) ====> DP Memoization    TC = O( ) , SC = O()  see below 
 // //                     
 // //                     
-// // //  3rd Method  ====> 2- DP Memoization (vector)   TC = O(n*(k+log(n))) , SC = O(n*k) 
+// // //  3rd Method  ====> 2- DP Memoization    TC = O(n*(k+log(n))) , SC = O(n*k) 
 // //                     
-// //                     
+// //     
+// //
+// // // //  Also see the wrong approach of 3rd method  at the last
+// // // //  Also see the wrong approach of 3rd method  at the last
+// // // //  Also see the wrong approach of 3rd method  at the last
+// //
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -50,15 +65,22 @@
 
 
 // //                           
+// // //  1st Method    ======>   Simple Recursion(TLE TLE TLE)  
+// // //  1st Method    ======>   Simple Recursion(TLE TLE TLE)  
+// // //  1st Method    ======>   Simple Recursion(TLE TLE TLE)  
 // //                           
-// // //  1st Method    ======>   Simple Recursion(T:E TLE TLE)  
-// // //  1st Method    ======>   Simple Recursion(T:E TLE TLE)  
-// // //  1st Method    ======>   Simple Recursion(T:E TLE TLE)  
+                              
+
+
+
+// // //  1st  Method   ====>      1st way   =====>    Simple Recursion with option take or not take                             
+// // //  1st  Method   ====>      1st way   =====>    Simple Recursion with option take or not take                             
+// // //  1st  Method   ====>      1st way   =====>    Simple Recursion with option take or not take                             
 // //                             
-// // //   Time Complexity   = O()   
+// // //   Time Complexity   = O(2^n)   
 // //                              
-// // //   Space Complexity  = O()   
-// //                               
+// // //   Space Complexity  = O(1) conatant  
+// // 
 
 
 // class Solution {
@@ -90,19 +112,71 @@
 
 
 
+// // //  1st  Method   ====>      2nd  way   =====>   Simple Recursion with linear search                               
+// // //  1st  Method   ====>      2nd  way   =====>   Simple Recursion with linear search                               
+// // //  1st  Method   ====>      2nd  way   =====>   Simple Recursion with linear search                               
+// //                             
+// // //   Time Complexity   = O(2^n * n)   
+// //                              
+// // //   Space Complexity  = O(1) constant   
+// // 
+
+
+// class Solution {
+// public:
+//     int n  ;
+//     int calculateValue(int i , int k , vector<vector<int>>& events )
+//     {
+//         if(i==n) return 0 ;
+//         if(k==0) return 0 ;
+//         int ans = 0 ;
+//         ans = max(ans ,  calculateValue(i+1 , k , events) ) ;
+//         int j = i+1 ;
+//         for( ; j<n; j++)  
+//         if(events[j][0] > events[i][1]) break;
+//         ans = max(ans ,  events[i][2] + calculateValue(j , k-1 , events) ) ;
+//         return ans ;  
+//     }
+//     // // // // //    Main Function of Question    ==========>
+//     // // // // //    Main Function of Question    ==========>
+//     //
+//     int maxValue(vector<vector<int>>& events, int k) 
+//     {
+//         n = events.size() ;
+//         sort(events.begin() , events.end()) ;
+//         int ans = calculateValue(0 , k , events) ;  
+//         return ans ;  
+//     }
+// };
+
+
+
+
+
+
+
+
+
 
 
 
 
 // //                           
+// // //  2nd Method    ======>   DP Memoization 
+// // //  2nd Method    ======>   DP Memoization 
+// // //  2nd Method    ======>   DP Memoization 
 // //                           
-// // //  2nd Method    ======>    3- DP Memoization (map)
-// // //  2nd Method    ======>    3- DP Memoization (map)
-// // //  2nd Method    ======>    3- DP Memoization (map)
+
+
+
+
+// // //   2nd Method   ====>      1st way   =====>   3-DP Memoization with map                              
+// // //   2nd Method   ====>      1st way   =====>   3-DP Memoization with map                              
+// // //   2nd Method   ====>      1st way   =====>   3-DP Memoization with map                              
 // //
 // //      // //   n is size of events , t is no of prev states or prev index , k is no of max events
 // //                             
-// // //   Time Complexity   = O(n*(k+log(n)))    (not confirmed)
+// // //   Time Complexity   = O( n*k*log(n) )    (not confirmed)
 // //                              
 // // //   Space Complexity  = O(n*t*k)    
 // //                               
@@ -144,21 +218,75 @@
 
 
 
+//
+// // //  We an also do this by DP Memoization with Binary Search
+// // //  We an also do this by DP Memoization with Binary Search
+// // //  We an also do this by DP Memoization with Binary Search
+//
+//
+// // //   2nd Method   ====>     2nd  way   =====>  2-DP Memoization with linera search                            
+// // //   2nd Method   ====>     2nd  way   =====>  2-DP Memoization with linera search                            
+// // //   2nd Method   ====>     2nd  way   =====>  2-DP Memoization with linera search                            
+// //
+// //      // //   n is size of events , t is no of prev states or prev index , k is no of max events
+// //                             
+// // //   Time Complexity   = O( n * k  * n )    
+// //                              
+// // //   Space Complexity  = O(n*k)    
+// //                               
+
+
+// class Solution {
+// public:
+//     int n  ;
+//     vector<vector<int>> dp ;
+//     int calculateValue(int i , int k , vector<vector<int>>& events )
+//     {
+//         if(i==n) return 0 ;
+//         if(k==0) return 0 ;
+//         if(dp[i][k] != -1) return dp[i][k] ;
+//         int ans = 0 ;
+//         ans = max(ans ,  calculateValue(i+1 , k , events) ) ;
+//         int j = i+1 ;
+//         for( ; j<n; j++)  
+//         if(events[j][0] > events[i][1]) break;
+//         ans = max(ans ,  events[i][2] + calculateValue(j , k-1 , events) ) ;
+//         return dp[i][k] = ans ;  
+//     }
+//     // // // // //    Main Function of Question    ==========>
+//     // // // // //    Main Function of Question    ==========>
+//     //
+//     int maxValue(vector<vector<int>>& events, int k) 
+//     {
+//         n = events.size() ;
+//         dp.resize(n+5 , vector<int>(k+5,-1)) ;
+//         sort(events.begin() , events.end()) ;
+//         int ans = calculateValue(0 , k , events) ;  
+//         return ans ;  
+//     }
+// };
 
 
 
 
 
-// // // //  Also see the wrong approach of 3rd method  after this
-// // // //  Also see the wrong approach of 3rd method  after this
-// // // //  Also see the wrong approach of 3rd method  after this
+
+
+
+
+
+
+
+
+
+
 
 
 // //                           
 // //                           
-// // //  3rd Method    ======>   2- DP Memoization (vector)
-// // //  3rd Method    ======>   2- DP Memoization (vector)
-// // //  3rd Method    ======>   2- DP Memoization (vector)
+// // //  3rd Method    ======>   2- DP Memoization
+// // //  3rd Method    ======>   2- DP Memoization
+// // //  3rd Method    ======>   2- DP Memoization
 // //                             
 // // //   Time Complexity   = O( nlog(n) + n*k ) == O(n*(k+log(n)))   
 // //                              
