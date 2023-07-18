@@ -32,7 +32,7 @@ using namespace std;
 // 	    for(int i=0; i<V; i++)
 //  	    {
 //  	        if(vis[i]) continue ;
-// 	        dfs(0 , V , adj) ; 
+// 	        dfs(i , V , adj) ; 
 // 	    }
 // 	    reverse(ans.begin() , ans.end()) ;  
 //         return ans ;
@@ -44,15 +44,13 @@ using namespace std;
 class Solution
 {
 	public:
-	int vis[1000000] = {0} ;
-	stack<int> st ; 
-    void dfs(int node ,  vector<int>adj[])
+	
+    void dfs(int node ,  vector<int> adj[] ,vector<int> &vis, stack<int> &st)
     {
         vis[node] = 1 ;
         for(int child : adj[node])
         {
-            if(vis[child]) continue ;
-            dfs(child, adj) ;
+            if( ! vis[child]) dfs(child, adj, vis , st) ;
         }
         st.push(node) ;
     }
@@ -60,17 +58,17 @@ class Solution
 	vector<int> topoSort(int V, vector<int> adj[]) 
 	{
 	    // code here
-	    for(int i=0; i<V; i++)
- 	    {
- 	        if(vis[i]) continue ;
-	        dfs(i , adj) ; 
-	    }
-	    vector<int> ans ;
-	    while(st.size()) ans.push_back(st.top()) , st.pop() ; 
+	    vector<int> vis(V,0) ; 
+        stack<int> st ;  
+        for (int i = 0; i < V; i++) 
+        {
+            if (!vis[i])  dfs(i, adj, vis , st);
+        }
+        vector<int> ans ;
+        while(st.size()) ans.push_back(st.top()) , st.pop() ; 
         return ans ;
 	}
 };
-
 
 
 
