@@ -4,13 +4,12 @@
 
 
 
-
 // //
 // // // // // // //  Solve Using  Only One  Method  ===>     
 // // // // // // //  Solve Using  Only One  Method  ===>                        
 // //                     
 // //                     
-// // //  1st Method  ====> Using Doubly Linked List and map     TC = O(1) Best Case , SC = O(n) 
+// // //  1st Method  ====> Using Doubly Linked List and Unordered_map     TC = O(1) Best Case , SC = O(n) 
 // //                      
 // //                      
 /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -57,9 +56,9 @@
 
 // //                           
 // //                           
-// // //  1st Method    ======>   Using Doubly Linked List and map   
-// // //  1st Method    ======>   Using Doubly Linked List and map   
-// // //  1st Method    ======>   Using Doubly Linked List and map   
+// // //  1st Method    ======>   Using Doubly Linked List and Unordered_map  
+// // //  1st Method    ======>   Using Doubly Linked List and Unordered_map  
+// // //  1st Method    ======>   Using Doubly Linked List and Unordered_map  
 // //                             
 // // //   Time Complexity   = O(1)
 // //                         get => O(1)  Best Case   ,  O(n) very worst Case   
