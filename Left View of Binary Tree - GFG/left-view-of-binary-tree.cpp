@@ -140,8 +140,23 @@ void left(Node * root , int level , vector<int> & ans)
 {
     if(root==NULL) return ;
     if(ans.size()==level) ans.push_back(root->data);
+    //
+    //
+    //
+    //  the below is for left view
+    //  the below is for left view
+    //  the below is for left view
     left(root->left , level+1 , ans ) ;
     left(root->right ,level+1 , ans ) ;
+    //
+    //
+    //
+    //  the below is for right view
+    //  the below is for right view
+    //  the below is for right view
+    //
+    // left(root->right ,level+1 , ans ) ;
+    // left(root->left , level+1 , ans ) ;
 }
 vector<int> leftView(Node *root)
 {
