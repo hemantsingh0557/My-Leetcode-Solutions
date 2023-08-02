@@ -6,18 +6,6 @@
 
 
 
-// //
-// // // // // // //  Solve Using  Only One Method  ===>     
-// // // // // // //  Solve Using  Only One Method  ===>                        
-// //                     
-// //                     
-// // 1st Method ===> Simple Recursion and Backtracking   TC = O(n * n!) , SC = O(1) constant
-// //                       
-// //                      
-/////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
 // class Solution {
 // public:
 //     vector<vector<int>> permute(vector<int>& nums) {
@@ -27,7 +15,36 @@
 
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// //
+// // // // // // //  Solve Using  Only One Method  ===>     
+// // // // // // //  Solve Using  Only One Method  ===>                        
+// //                     
+// //                     
+// // 1st Method ===> Simple Recursion and Backtracking   TC = O(n * n!) , SC = O(1) constant
+// //                       
+// //                      
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -49,31 +66,37 @@
 
 
 
+
+
 class Solution {
 public:
-    int n ;
+    int n ; 
     vector<vector<int>> ans ;
-    void solve(int i , vector<int>& nums )
+    void allpermutation( int i , vector<int> &nums )
     {
         if(i==n)
         {
             ans.push_back(nums) ;
-            return ;
+            return ; 
         }
-        for(int j=i ; j<n; j++)
+        for(int j = i ; j<n; j++)
         {
-            swap(nums[i], nums[j]) ;
-            solve(i+1 , nums ) ;
-            swap(nums[i], nums[j]) ;
+            swap(nums[i] , nums[j]) ;
+            allpermutation( i+1 , nums ) ;
+            swap(nums[i] , nums[j]) ;
         }
     }
+    // // // // //    Main Function of Question    ==========>
+    // // // // //    Main Function of Question    ==========>
+    //
     vector<vector<int>> permute(vector<int>& nums) 
     {
         n = nums.size() ;
-        solve(0 , nums) ;
+        allpermutation(0 , nums) ;
         return ans ;
     }
 };
+
 
 
 
