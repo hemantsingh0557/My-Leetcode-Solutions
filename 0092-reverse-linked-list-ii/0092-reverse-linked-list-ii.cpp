@@ -185,8 +185,10 @@ public:
         ListNode * temp = head ;
         ListNode * prevleftnode=NULL , *leftnode  , *prev = NULL ; 
         int len = 0 ; 
+        // here we find the preious node leftnode 
         while( len < left-1 ) prevleftnode = temp ,  temp = temp->next , len++  ; 
         leftnode = temp ;
+        // //  now we reverse the list between left and right(both include)
         while(temp && len < right )
         {
             ListNode * nxt = temp->next ;
@@ -195,24 +197,22 @@ public:
             temp = nxt ;
             len++ ;
         }
+        // // after reverseing we update the next pointer of left node
+        // // for in example-1 here  we update the next poniter of node 2 to node 5
         leftnode->next = temp ;
+        // // if left is 1 means like  1->2->3->4->5->6->7->8
+        // // now if left 1 and right 4 then 
+        // // reverse list will be 4->3->2->1->5->6->7->8
+        // // that means we revese the prev poniter 
+        // //
         if(left==1) return prev ; 
+        // //
+        // // it means left will not 1 so prevleftnode is the node before left node so we need to 
+        // // update the next   pointer of prevleftnode to the prev
         prevleftnode->next = prev ;
         return head; 
     }
 };
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
