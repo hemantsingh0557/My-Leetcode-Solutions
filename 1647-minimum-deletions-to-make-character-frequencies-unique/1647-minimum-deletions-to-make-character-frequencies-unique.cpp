@@ -69,68 +69,68 @@
 
 
 
-// class Solution {
-// public:
-//     int minDeletions(string s) 
-//     {
-//         int n = s.size() ; 
-//         vector<int> hsh(30, 0) ;
-//         for(int i=0; i<n; i++)   hsh[s[i] -'a'] ++ ; 
-//         sort(hsh.begin() , hsh.end() ) ;  
-//         // // //   here it is compulsory because below we compare the consecutive element 
-//         //
-//         unordered_set<int> st ; 
-//         int ans = 0 ; 
-//         for(int i=0; i<29; i++)
-//         {
-//             if( !hsh[i] ) continue ; 
-//             if( hsh[i] == hsh[i+1] )
-//             {
-//                 hsh[i]-- , ans++ ;
-//                 while( st.count(hsh[i]) ) hsh[i]-- , ans++ ;
-//             }
-//             if( hsh[i] ) st.insert(hsh[i]) ;
-//         }
-//         return ans ; 
-//     }
-// };
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // //   1st  Method   ====>   2nd way   =====>     Using hashing  and set    
-// // //   1st  Method   ====>   2nd way   =====>     Using hashing  and set    
-// // //   1st  Method   ====>   2nd way   =====>     Using hashing  and set    
-
-
-
 class Solution {
 public:
     int minDeletions(string s) 
     {
         int n = s.size() ; 
         vector<int> hsh(30, 0) ;
-        for(int i=0; i<n; i++)    hsh[s[i] -'a'] ++ ; 
-        // sort(hsh.begin() , hsh.end() ) ;      // // //  not compulsory 
+        for(int i=0; i<n; i++)   hsh[s[i] -'a'] ++ ; 
+        sort(hsh.begin() , hsh.end() ) ;  
+        // // //   here it is compulsory because below we compare the consecutive element 
+        //
         unordered_set<int> st ; 
         int ans = 0 ; 
-        for(int i=0; i<30; i++)
+        for(int i=0; i<29; i++)
         {
-            while( hsh[i]>0 && st.count(hsh[i]) ) hsh[i]-- , ans ++ ;
-            if( hsh[i] )  st.insert(hsh[i]) ; 
+            if( !hsh[i] ) continue ; 
+            if( hsh[i] == hsh[i+1] )
+            {
+                hsh[i]-- , ans++ ;
+                while( st.count(hsh[i]) ) hsh[i]-- , ans++ ;
+            }
+            if( hsh[i] ) st.insert(hsh[i]) ;
         }
         return ans ; 
     }
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // //   1st  Method   ====>   2nd way   =====>     Using hashing  and set    
+// // //   1st  Method   ====>   2nd way   =====>     Using hashing  and set    
+// // //   1st  Method   ====>   2nd way   =====>     Using hashing  and set    
+
+
+
+// class Solution {
+// public:
+//     int minDeletions(string s) 
+//     {
+//         int n = s.size() ; 
+//         vector<int> hsh(30, 0) ;
+//         for(int i=0; i<n; i++)    hsh[s[i] -'a'] ++ ; 
+//         // sort(hsh.begin() , hsh.end() ) ;      // // //  not compulsory 
+//         unordered_set<int> st ; 
+//         int ans = 0 ; 
+//         for(int i=0; i<30; i++)
+//         {
+//             while( hsh[i]>0 && st.count(hsh[i]) ) hsh[i]-- , ans ++ ;
+//             if( hsh[i] )  st.insert(hsh[i]) ; 
+//         }
+//         return ans ; 
+//     }
+// };
 
 
 
