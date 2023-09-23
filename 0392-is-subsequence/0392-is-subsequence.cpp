@@ -4,12 +4,6 @@
 
 
 
-
-
-
-
-
-
 // class Solution {
 // public:
 //     bool isSubsequence(string s, string t) {
@@ -26,6 +20,19 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+// Today's   Date   -    22nd   September   2023    -   Friday  .    
 
 
 
@@ -178,6 +185,19 @@ public:
         return (i==m) ; 
     }
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
