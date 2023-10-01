@@ -33,8 +33,8 @@
 
 
 // //
-// // // // // // //  Solve Using  Two   Method  ===>     
-// // // // // // //  Solve Using  Two   Method  ===>                        
+// // // // // // //  Solve Using  Three   Method  ===>     
+// // // // // // //  Solve Using  Three   Method  ===>                        
 // //                     
 // //                     
 // // //  1st Method  ====> Using Stack   TC = O(n) , SC = O(n) 
@@ -43,6 +43,9 @@
 // // //  2nd Method  ====>  Using reverse inbuilt function   TC = O(n) , SC = O(1) constant
 // //                     
 // //                     
+// // //  3rd Method  ====>  Using two pointer   TC = O(n) , SC = O(1) constant
+// //
+// //
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -103,21 +106,59 @@
 // //                               
 
 
+// class Solution {
+// public:
+//     string reverseWords(string s) 
+//     {
+//         int n = s.size() ;
+//         int prev = 0 ; 
+//         for(int i=0; i<n; i++ )
+//         {
+//             if( s[i] == ' ' )
+//             {
+//                 reverse(s.begin()+prev , s.begin()+i) ;
+//                 prev = i+1 ;
+//             }
+//         }
+//         reverse(s.begin()+prev , s.end()) ;
+//         return s ;
+//     }
+// };
+
+
+
+
+
+
+// //                           
+// //                           
+// // //  3rd  Method    ======>    Using two pointer
+// // //  3rd  Method    ======>    Using two pointer
+// // //  3rd  Method    ======>    Using two pointer
+// //                             
+// // //   Time Complexity   = O(n)   
+// //                              
+// // //   Space Complexity  = O(1) constant  
+// //                               
+
+
 class Solution {
 public:
     string reverseWords(string s) 
     {
         int n = s.size() ;
-        int prev = 0 ; 
+        int j = 0 , k = 0;  ; 
         for(int i=0; i<n; i++ )
         {
             if( s[i] == ' ' )
             {
-                reverse(s.begin()+prev , s.begin()+i) ;
-                prev = i+1 ;
+                k = i-1  ;
+                while(j<k) swap(s[j++] , s[k--]) ;
+                j = i+1 ;
             }
         }
-        reverse(s.begin()+prev , s.end()) ;
+        k = n-1  ;
+        while(j<k) swap(s[j++] , s[k--]) ;
         return s ;
     }
 };
