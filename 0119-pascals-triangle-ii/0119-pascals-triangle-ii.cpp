@@ -101,22 +101,22 @@
 
 
 
-// class Solution {
-// public:
-//     vector<int> getRow(int rowIndex) 
-//     {
-//         vector<int> ans ;
-//         long val = 1 ; 
-//         ans.push_back(val) ;
-//         for(int i=1; i<=rowIndex; i++)
-//         {
-//             val = val * ( rowIndex + 1 - i ) ;    
-//             val /= i ;    
-//             ans.push_back(val) ;
-//         }
-//         return ans ;
-//     }
-// };
+class Solution {
+public:
+    vector<int> getRow(int rowIndex) 
+    {
+        vector<int> ans ;
+        long val = 1 ; 
+        ans.push_back(val) ;
+        for(int i=1; i<=rowIndex; i++)
+        {
+            val = val * ( rowIndex + 1 - i ) ;    
+            val /= i ;    
+            ans.push_back(val) ;
+        }
+        return ans ;
+    }
+};
 
 
 
@@ -138,24 +138,24 @@
 
 
 
-class Solution {
-public:
-    vector<int> getRow(int rowIndex) 
-    {
-        vector<int> ans(rowIndex+1 , 0) ;
-        long val = 1 ; 
-        ans[0] = val ;
-        ans[rowIndex] = val ;
-        for(int i=1; i<=rowIndex/2; i++)
-        {
-            val = val * ( rowIndex + 1 - i ) ;    
-            val /= i ;    
-            ans[i] = val ;
-            ans[rowIndex-i] = val ;
-        }
-        return ans ;
-    }
-};
+// class Solution {
+// public:
+//     vector<int> getRow(int rowIndex) 
+//     {
+//         vector<int> ans(rowIndex+1 , 0) ;
+//         long val = 1 ; 
+//         ans[0] = val ;
+//         ans[rowIndex] = val ;
+//         for(int i=1; i<=rowIndex/2; i++)
+//         {
+//             val = val * ( rowIndex + 1 - i ) ;    
+//             val /= i ;    
+//             ans[i] = val ;
+//             ans[rowIndex-i] = val ;
+//         }
+//         return ans ;
+//     }
+// };
 
 
 
