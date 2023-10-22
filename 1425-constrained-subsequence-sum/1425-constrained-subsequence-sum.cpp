@@ -9,6 +9,21 @@
 
 
 
+// // // // // only the first method was able to solve, and that too gives  time limit exceed
+// // // // // only the first method was able to solve, and that too gives  time limit exceed
+// // // // // only the first method was able to solve, and that too gives  time limit exceed
+// // // // // only the first method was able to solve, and that too gives  time limit exceed
+
+
+
+
+
+
+
+
+
+
+
 // class Solution {
 // public:
 //     int constrainedSubsetSum(vector<int>& nums, int k) {
