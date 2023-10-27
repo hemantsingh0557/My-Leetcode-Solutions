@@ -3,24 +3,7 @@
 
 
 
-// //
-// // // // // // //  Solve Using  Three   Method  ===>     
-// // // // // // //  Solve Using  Three   Method  ===>                        
-// //                     
-// //                     
-// // //  1st Method  ====> make all substring at each index and check Palindrome   TC = O(n^3) , SC = O(1) constant
-// //                      
-// //                      
-// //                // //  2nd method is optimal than 1st but in worst case it will also run O(n^3)
-// // //  2nd Method  ====> First make bigger length string and check palindrome    TC = O(n^3) , SC = O(1) constant
-// //
-// //                     
-// // //  3rd Method  ====>  From each index as a middle of palindrome   TC = O(n^2) , SC = O(n)  
-// //                     
-// //                     
-/////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 
 // class Solution {
@@ -32,9 +15,70 @@
 
 
 
+
+
+
+
+
+
+
+
+// ///  Done BY TWO POINTER   
+// ///  Done BY TWO POINTER  
+// ///  Done BY TWO POINTER  
+// ///  Done BY TWO POINTER  
+// ///  Done BY TWO POINTER  
+// ///  Done BY TWO POINTER  
+
+
+
+// // // not done by DP
+// // // not done by DP
+// // // not done by DP
+// // // not done by DP
+// // // not done by DP
+// // // not done by DP
+// // // not done by DP
+
+
+// // // try to done by DP
+// // // try to done by DP
+// // // try to done by DP
+// // // try to done by DP
+// // // try to done by DP
+// // // try to done by DP
+// // // try to done by DP
+
+
+
+
+
+
+
+
+
+
+// //
+// // // // // // //  Solve Using  Three   Method  ===>     
+// // // // // // //  Solve Using  Three   Method  ===>                        
+// //                     
+// //                     (TLE TLE TLE)  (TLE TLE TLE)
+// // 1st Method ==> make all substring and check Palindrome   TC = O(n^3) , SC = O(1) constant
+// //                      
+// //                      
+// //                 (TLE TLE TLE)  (TLE TLE TLE)
+// //                // //  2nd method is optimal than 1st but in worst case it will also run O(n^3)
+// // 2nd Method ==> First bigger length string and check palindrome   TC = O(n^3) , SC = O(1) constant
+// //
+// //                     
+// // 3rd Method ==> Two Pointer,  each index as a middle of palindrome   TC = O(n^2) , SC = O(n)  
+// //                     
+// //                     
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 
 
 
@@ -46,9 +90,9 @@
 
 // //                           
 // //                           
-// // //  1st Method    ======>   make all substring at each index and check Palindrome 
-// // //  1st Method    ======>   make all substring at each index and check Palindrome 
-// // //  1st Method    ======>   make all substring at each index and check Palindrome 
+// // //  1st Method    ======>   make all substring at each index and check Palindrome (TLE TLE TLE)
+// // //  1st Method    ======>   make all substring at each index and check Palindrome (TLE TLE TLE)
+// // //  1st Method    ======>   make all substring at each index and check Palindrome (TLE TLE TLE)
 // //                             
 // // //   Time Complexity   = O(n^3)   
 // //                              
@@ -91,9 +135,9 @@
 
 // //                           
 // //                           
-// // //  2nd Method    ======>   First make bigger length string and check palindrome 
-// // //  2nd Method    ======>   First make bigger length string and check palindrome 
-// // //  2nd Method    ======>   First make bigger length string and check palindrome 
+// // //  2nd Method    ======>   First make bigger length string and check palindrome   (TLE TLE TLE)
+// // //  2nd Method    ======>   First make bigger length string and check palindrome   (TLE TLE TLE)
+// // //  2nd Method    ======>   First make bigger length string and check palindrome   (TLE TLE TLE)
 // //                           
 // //                        
 // // //   Time Complexity   = O(n^3)   //  2nd method is optimal than 1st but in worst case it will also run O(n^3) 
@@ -138,9 +182,9 @@
 
 // //                           
 // //                           
-// // //  3rd Method    ======>    From each index as a middle of palindrome   
-// // //  3rd Method    ======>    From each index as a middle of palindrome   
-// // //  3rd Method    ======>    From each index as a middle of palindrome   
+// // //  3rd Method    ======>  Two Pointer ,   From each index as a middle of palindrome   
+// // //  3rd Method    ======>  Two Pointer ,   From each index as a middle of palindrome   
+// // //  3rd Method    ======>  Two Pointer ,   From each index as a middle of palindrome   
 // //                             
 // // //   Time Complexity   = O(n^2)   
 // //                              
@@ -175,6 +219,63 @@ public:
         return ans ;
     }
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
