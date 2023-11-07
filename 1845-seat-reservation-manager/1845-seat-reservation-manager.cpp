@@ -228,6 +228,8 @@
 // // //   Space Complexity  = O(n)   
 // //                               
 
+
+
 class SeatManager {
 public:
     set <int> st;
