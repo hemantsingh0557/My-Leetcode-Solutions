@@ -5,20 +5,7 @@
 
 
 
-// //
-// // // // // // //  Solve Using Two Method  ===>     
-// // // // // // //  Solve Using Two Method  ===>                        
-// //                     
-// //                     
-// // //  1st Method  ====> Simple Hashing (map)    TC = O(n) , SC = O(n) 
-// //                      
-// //                      
-// // //  2nd Method  ====> Using sort()    TC = O(nlog(n)) , SC = O(1) constant
-// //                     
-// //                     
-/////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 
 
@@ -32,11 +19,27 @@
 
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+
+
+
+
+
+// //
+// // // // // // //  Solve Using  Two   Method  ===>     
+// // // // // // //  Solve Using  Two   Method  ===>                        
+// //                     
+// //                  // // here n is max length of s or t    
+// // //  1st Method  ====> Simple Hashing  (map)    TC = O(n) , SC = O(n) 
+// //                      
+// //                      
+// // //  2nd Method  ====> Using sort() function    TC = O(n*log(n)) , SC = O(log(n)) 
+// //                     
+// //                     
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
@@ -54,19 +57,13 @@
 
 // class Solution {
 // public:
-//     bool isAnagram(string s, string t)
+//     bool isAnagram(string s, string t) 
 //     {
-//         int n = s.size() ;
-//         int m = t.size() ;
-//         if(n!=m) return false ;
-//         unordered_map<char,int> mp ; 
-//         for(int i=0; i<n; i++) mp[s[i]] ++ ;
-//         for(int i=0; i<m; i++)
-//         {
-//             if( ! mp.count(t[i]) || mp[t[i]]==0 ) return false ;
-//             else mp[t[i]] -- ;  
-//         }
-//         return true ;
+//         unordered_map<int,int> mp ;
+//         for(int i=0; i<s.size(); i++) mp[s[i]] ++ ;
+//         for(int i=0; i<t.size(); i++) mp[t[i]] -- ;
+//         for(auto it : mp ) if( it.second != 0 ) return false ;
+//         return true ; 
 //     }
 // };
 
@@ -76,15 +73,17 @@
 
 
 
+
 // //                           
 // //                           
 // // //  2nd Method    ======>   Using sort()
 // // //  2nd Method    ======>   Using sort()
 // // //  2nd Method    ======>   Using sort()
-// //                             
+// //
+// //                  // // here n is max length of s or t               
 // // //   Time Complexity   = O(nlog(n))   
 // //                              
-// // //   Space Complexity  = O(1) constant  
+// // //   Space Complexity  = O(log(n))   
 // //                               
 
 
@@ -92,18 +91,41 @@ class Solution {
 public:
     bool isAnagram(string s, string t)
     {
-        int n = s.size() ;
-        int m = t.size() ;
-        if(n!=m) return false ;
+        if( s.size() != t.size() ) return false ;
         sort(s.begin(), s.end()) ;
         sort(t.begin(), t.end()) ;
-        for(int i=0; i<n; i++)
+        for(int i=0; i<s.size(); i++)
         {
             if(s[i] != t[i]) return false ;
         }
         return true ;
     }
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
