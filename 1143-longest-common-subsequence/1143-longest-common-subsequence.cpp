@@ -3,6 +3,10 @@
 
 
 
+
+
+
+
 // class Solution {
 // public:
 //     int longestCommonSubsequence(string text1, string text2) 
@@ -23,20 +27,12 @@
 
 
 
-
-
-
-
-
-
-
-
 // //
 // // // // // // //  Solve Using  Two  Method  ===>     
 // // // // // // //  Solve Using  Two  Method  ===>                        
 // //                     
 // //                     
-// // 1st Method ( Two Ways)  ====> Simple Recursion(TLE TLE TLE)    TC = O(n) , SC = O(1) constant
+// // 1st Method ( Two Ways)  ====> Simple Recursion(TLE TLE TLE)    TC = O() , SC = O() 
 // //                      
 // //                      
 // // 2nd Method ( Two Ways)  ====>  DP Memoization   TC = O(n^2) , SC = O(n^2) 
@@ -53,13 +49,13 @@
 
 // //                           
 // //                           
-// // //  1st Method    ======>    Simple Recursion(TLE TLE TLE)  
-// // //  1st Method    ======>    Simple Recursion(TLE TLE TLE)  
-// // //  1st Method    ======>    Simple Recursion(TLE TLE TLE)  
+// // //  1st Method ( Two Ways)   ======>    Simple Recursion(TLE TLE TLE)  
+// // //  1st Method ( Two Ways)   ======>    Simple Recursion(TLE TLE TLE)  
+// // //  1st Method ( Two Ways)   ======>    Simple Recursion(TLE TLE TLE)  
 // //                             
-// // //   Time Complexity   = O(n)   
+// // //   Time Complexity   = O()   
 // //                              
-// // //   Space Complexity  = O(1) constant  
+// // //   Space Complexity  = O()   
 // //                               
 
 
@@ -131,13 +127,13 @@
 
 // //                           
 // //                           
-// // //  2nd Method    ======>    DP   Memoization
-// // //  2nd Method    ======>    DP   Memoization
-// // //  2nd Method    ======>    DP   Memoization
+// // //  2nd Method  (Two Ways)  ======>    DP   Memoization
+// // //  2nd Method  (Two Ways)  ======>    DP   Memoization
+// // //  2nd Method  (Two Ways)  ======>    DP   Memoization
 // //                             
-// // //   Time Complexity   = O(n)   
+// // //   Time Complexity   = O(n^2)   
 // //                              
-// // //   Space Complexity  = O(1) constant  
+// // //   Space Complexity  = O(n^2)   
 // //                               
 
 
@@ -208,61 +204,6 @@ public:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// class Solution {
-// public:
-
-// // Time Complexity == O(n^2)
-
-
-//     int dp[1005][1005] ;
-
-//     int lcs(int i, int j, string &s1 , string &s2 )
-//     {
-//         if(i<0 || j< 0 ) return 0;
-//         if(dp[i][j] != -1 ) return dp[i][j] ;
-
-//         // remove 1 character from s1
-//         int ans = lcs(i-1, j , s1, s2) ;
-
-//         // remove 1 character from s2
-//         ans = max(ans,lcs(i, j-1 , s1, s2)) ;
-
-//         // remove character from s1 and s2 both
-//         ans = max(ans, lcs(i-1, j-1 , s1, s2) + (s1[i]==s2[j]) );
-
-//         return dp[i][j] = ans;
-//     }
-
-//     int longestCommonSubsequence(string text1, string text2) 
-//     {
-//         memset(dp, -1, sizeof(dp)) ;
-
-//         return lcs( text1.size()-1 , text2.size()-1, text1 , text2 ) ;
-        
-//     }
-// };
 
 
 
