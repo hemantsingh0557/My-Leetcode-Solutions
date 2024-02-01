@@ -7,10 +7,11 @@
 
 
 
+
+
 // class Solution {
 // public:
-//     vector<vector<int>> divideArray(vector<int>& nums, int k) 
-//     {
+//     vector<vector<int>> divideArray(vector<int>& nums, int k) {
         
 //     }
 // };
@@ -26,32 +27,86 @@
 
 
 
+
+
+
+// //
+// // // // // // //  Solve Using  Only One  Method  ===>     
+// // // // // // //  Solve Using  Only One  Method  ===>                        
+// //                     
+// //                     
+// // //  1st Method  ====> Using sort()    TC = O(n*log(n)) , SC = O(log(n)) for sorting
+// //                      
+// //                      
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+// //                           
+// //                           
+// // //  1st Method    ======>   Using sort()  
+// // //  1st Method    ======>   Using sort()  
+// // //  1st Method    ======>   Using sort()  
+// //                             
+// // //   Time Complexity   =  O(n*log(n))   
+// //                              
+// // //   Space Complexity  =  O(log(n)) for sorting
+// //                               
+
+
 class Solution {
 public:
     vector<vector<int>> divideArray(vector<int>& nums, int k) 
     {
-        int n = nums.size() ;
-        map<int,int> mp ;
-        for(int i=0; i<n; i++) mp[nums[i]] ++  ; 
-        vector<vector<int>> ans ;
-        vector<int> temp ; 
-        for( auto it : mp )
+        int n = nums.size() ; 
+        sort(nums.begin() , nums.end() ) ; 
+        vector<vector<int>> ans ; 
+        for(int i=0; i<=n-3; i+=3)
         {
-            while( it.second-- )
-            {
-                temp.push_back(it.first) ;
-                if((int)temp.size() == 3 ) 
-                {
-                    ans.push_back(temp)  ;
-                    if( abs( temp[0]-temp[1]) > k || abs( temp[1]-temp[2]) > k || abs( temp[0]-temp[2]) > k  ) 
-                    return {} ; 
-                    temp.clear() ;
-                }
-            }
+            // if( nums[i+1] - nums[i] > k || nums[i+2] - nums[i] > k || nums[i+2] - nums[i+1] > k) return {} ;
+            if( nums[i+2] - nums[i] > k ) return {} ;
+            ans.push_back({nums[i] , nums[i+1] , nums[i+2]}) ;
         }
-        return ans ;
+        return ans ; 
     }
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
