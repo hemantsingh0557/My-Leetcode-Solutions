@@ -49,7 +49,7 @@
 // // // // // // //  Solve Using  Only One  Method  ===>                        
 // //                     
 // //                     
-// // //  1st Method  ====>  Using DFS    TC = O(n^2) or O(n) , SC = O(n) 
+// // //  1st Method ( Two Ways )  ====>  Using DFS    TC = O(n^2) or O(n) , SC = O(n) 
 // //                      
 // //                      
 /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -63,13 +63,11 @@
 
 
 // //                           
-// // //  1st Method    ======>   Using DFS 
-// // //  1st Method    ======>   Using DFS 
-// // //  1st Method    ======>   Using DFS 
+// // //  1st Method ( Two Ways )  ======>   Using DFS 
+// // //  1st Method ( Two Ways )  ======>   Using DFS 
+// // //  1st Method ( Two Ways )  ======>   Using DFS 
 // //                             
                            
-
-
 
 
 // //
@@ -170,7 +168,6 @@ public:
         return ans ;
     }
 };
-
 
 
 
