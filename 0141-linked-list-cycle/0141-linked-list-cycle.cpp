@@ -30,34 +30,18 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-// //
 // //
 // //
 // // // // // // //  Solve Using Three  Method  ===>
 // // // // // // //  Solve Using Three  Method  ===>
-// //
 // //
 // // // // 1st Method    ======>  Using set or map      TC = O(n) , SC = O(n)  
 // //
-// //
 // // // // 2nd Method    ======>  Simple Using Count      TC = O(n) , SC = O(1) constant 
-// //
 // //
 // //                       // //  Floyd's Tortoise and Hare 
 // // // // 3rd Method    ======>  Slow and fast pointer     TC = O(n) , SC = O(1) constant 
 // // 
-// //
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -81,7 +65,6 @@
 // //
 // // //   Space Complexity  = O(n)  
 // //
-
 
 // /**
 //  * Definition for singly-linked list.
@@ -112,17 +95,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 // //
 // // // //    2nd Method    ======>  Simple Using Count    
 // // // //    2nd Method    ======>  Simple Using Count    
@@ -136,7 +108,6 @@
 // // //   Space Complexity  = O(1) constant 
 // //
 
-
 // /**
 //  * Definition for singly-linked list.
 //  * struct ListNode {
@@ -149,25 +120,12 @@
 // public:
 //     bool hasCycle(ListNode *head) 
 //     {
-//         ListNode *temp = head ;
-//         int ct = 0 ;
-//         while(temp ) 
-//         {
-//             temp = temp->next ;
-//             ct++ ;
-//             if(ct==100000) break ;// // although total node not more than 10000 but we take 100000
-//         }
-//         if(ct<100000) return false ;
-//         return true ;
+//         int n = 0 ; 
+//         while( head &&  n < 10005 ) head = head->next , n++ ; 
+//         if( n != 10005 ) return false ; 
+//         return true ; 
 //     }
 // };
-
-
-
-
-
-
-
 
 
 
@@ -194,7 +152,6 @@
 // //
 
 
-
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -217,6 +174,23 @@ public:
         return false ;
     }
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
