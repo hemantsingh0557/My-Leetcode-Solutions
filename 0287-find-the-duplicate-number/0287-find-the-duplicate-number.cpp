@@ -3,28 +3,15 @@
 
 
 
-//
-// // // // // // //  Solve Using  Three  Method  ===>
-// // // // // // //  Solve Using  Three  Method  ===>
-// // // // // // //  Solve Using  Three  Method  ===>
-// 
-//
-// // // //    1st Method   ====>   Use sort()   so wrong because we can't modify the array
-// // 
-// //
-// // // //    2nd Method   ====>   Use hash    so wrong because we use more space    
-// //
-// //                        // //  Floyd's Tortoise and Hare 
-// // // //    3rd Method   ====>   Slow Pointer and fast Pointer Method 
-// //
-// //
-//
 
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
 
 
 // class Solution {
@@ -45,13 +32,38 @@
 
 
 
-// // // //    1st Method   ====>   Use sort()   so wrong because we can't modify the array
-// // // //    1st Method   ====>   Use sort()   so wrong because we can't modify the array
-// // // //    1st Method   ====>   Use sort()   so wrong because we can't modify the array
-// // // //    1st Method   ====>   Use sort()   so wrong because we can't modify the array
 
 
-// // //
+
+
+
+
+// // // // // // //  Solve Using  Three  Method  ===>
+// // // // // // //  Solve Using  Three  Method  ===>
+// //
+// // // //    1st Method   ====>   Use sort()   so wrong because we can't modify the array
+// // 
+// // // //    2nd Method   ====>   Use hash    so wrong because we use more space    
+// //
+// // //                      // //  Floyd's Tortoise and Hare 
+// // // //    3rd Method   ====>   Slow Pointer and fast Pointer Method 
+// //
+// //
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+// // // //    1st Method   ====>   Use sort()   so wrong because we can't modify the array
+// // // //    1st Method   ====>   Use sort()   so wrong because we can't modify the array
+// // // //    1st Method   ====>   Use sort()   so wrong because we can't modify the array
+// // // //    1st Method   ====>   Use sort()   so wrong because we can't modify the array
 // // //
 // // // // // // //    it is wrong as per the question because we can't modify the array
 // // // // // // //    and we are using the sort()  function 
@@ -86,9 +98,6 @@
 // // // //    2nd Method   ====>   Use hash    so wrong because we use more space    
 // // // //    2nd Method   ====>   Use hash    so wrong because we use more space    
 // // // //    2nd Method   ====>   Use hash    so wrong because we use more space    
-
-
-// // //
 // // //
 // // // // // // //    it is wrong as per the question because we can't use more space 
 // // // // // // //    and we are using the hash  
@@ -119,8 +128,6 @@
 
 
 
-// //
-// //
 // // // //    3rd Method   ====>   Slow Pointer and fast Pointer Method 
 // // // //    3rd Method   ====>   Slow Pointer and fast Pointer Method 
 // // // //    3rd Method   ====>   Slow Pointer and fast Pointer Method 
@@ -129,7 +136,6 @@
 // // // //  Floyd's Tortoise and Hare 
 // // // //  Floyd's Tortoise and Hare 
 // // // //  Floyd's Tortoise and Hare 
-// //
 // //
 // // //   Time Complexity   = O( n)
 // //
@@ -162,6 +168,38 @@ public:
         return slow  ;
     }
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
