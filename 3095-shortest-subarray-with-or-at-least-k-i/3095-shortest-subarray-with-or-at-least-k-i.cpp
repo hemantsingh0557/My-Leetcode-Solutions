@@ -1,6 +1,12 @@
 
 
 
+// // //  see  same question with more Constraints
+// // //  see  same question with more Constraints
+// // //  see  same question with more Constraints
+
+// //  https://leetcode.com/problems/shortest-subarray-with-or-at-least-k-ii/description/
+
 
 
 
@@ -51,6 +57,7 @@
 // // //  https://stackoverflow.com/questions/26727044/how-to-reverse-a-bitwise-or-operation
 // // // 
 // // //
+
 
 
 
@@ -164,22 +171,16 @@ public:
         int ans = INT_MAX, i = 0;
         int res = 0;
         map<int, int> mp;
-
         for (int j = 0; j < n; ++j) 
         {
             bitset<32> binary_representation(nums[j]);
-
             for (int p = binary_representation.size() - 1; p >= 0; --p) 
             {
                 if (binary_representation[p] == 1) mp[p]++;
             }
-
             res |= nums[j];
-
             if (res >= k) 
             {
-                ans = min(ans, j - i + 1);
-                
                 while (res >= k && i <= j ) 
                 {
                     bitset<32> binary_representation(nums[i]);
@@ -198,10 +199,8 @@ public:
                 ans = min(ans, j - i + 1);
             }
         }
-
         if (ans == INT_MAX) return -1;
         return ans+1;
-        
     }
 };
 
@@ -267,9 +266,6 @@ public:
 //         
 //     }
 // };
-
-
-
 
 
 
